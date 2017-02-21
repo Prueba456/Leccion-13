@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi Primer Formulario</title>
+</head>
+<body>
+  <center><h1>Formulario de Datos</h1></center>
+  <section>
+    <center><form action=""><br/>
+    <div>
+      <label for="nombre">Nombre:</label><br/>
+      <input id="nombre" type="text" name="nombre" value="" pattern="[a-z]+" title="En minuscula" required/>
+    </div> <br/>
+    <div>
+      <label for="apellido">Apellido:</label><br/>
+      <input id="apellido" type="text" name="apellido" value="" pattern="[a-z]+" title="En minuscula" required/>
+    </div> <br/>
+    <div>
+      <label for="telefono">Telefono:</label><br/>
+      <input id="telefono" type="tel" pattern="^[9]\d{8}$" maxlength="9" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;"  title="El número telefónico tiene que empiezar con 9" name="Telefono" required/>
+    </div> <br/>
+      <label for="lista">Escoge tu carro para continuar</label><br/>
+      <select class="" name="elige" required>
+        <option hidden>Elige tu carro</option>
+        <option value="volvo"  >Volvo</option>
+        <option value="mercedes" >Mercedes</option>
+        <option value="audi" >Audi</option>
+      </select><br/><br/>
+      <div>
+        <label for="email">Email:</label><br/>
+        <input id="email"  type="text" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" name="email" required/>
+       </div><br/>
+      <div>
+        <label for="contrasena">Contraseña:</label><br/>
+        <input id="contrasena" type="text" pattern=".{6,}" value="" title="6 o más carácteres" name="contrasena" required/>
+      </div> <br/>
+       <button type ="submit">Enviar</button>
+    </form></center>
+  </section>
+</body>
+</html>
